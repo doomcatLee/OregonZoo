@@ -9,7 +9,8 @@ import { NewAnimalComponent } from './new-animal.component';
 
   <select (change)="onChange($event.target.value)">
     <option value="all">All Animals</option>
-    <option value="lowAnimal" (click)="showLowAnimal()">Young Animals</option>
+    <option value="youngAnimal">Young Animals</option>
+    <option value="lowCareTakers">Low Caretakers</option>
   </select>
 
 
@@ -31,9 +32,12 @@ import { NewAnimalComponent } from './new-animal.component';
 
     </div>
   </div>
+  </div>
+  </div>
 
-  <div *ngIf="filterByMaster==='lowAnimal'">
+  <div *ngIf="filterByMaster==='youngAnimal'">
   <div class="col-lg-4 col-sm-6 text-center" *ngFor="let currentAnimal of childAnimalList | masterPipe:filterByMaster">
+    <div class="well">
     <img class="img-circle img-responsive img-center" src=" {{currentAnimal.imgUrl}} " alt="">
     <div class="panel-heading">{{currentAnimal.name}}</div>
     <div class="panel-body">
@@ -50,16 +54,15 @@ import { NewAnimalComponent } from './new-animal.component';
 
     </div>
   </div>
-
-
-
+</div>
+</div>
   `
 })
 
 export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
   @Output() clickSender = new EventEmitter();
-  filterByMaster = 'all';
+  filterByMaster: string = 'all';
 
   onChange(optionFromMenu) {
     this.filterByMaster = optionFromMenu;
@@ -68,4 +71,5 @@ export class AnimalListComponent {
   editButtonHasBeenClicked(animalToEdit: Animal) {
     this.clickSender.emit(animalToEdit);
   }
+
 }

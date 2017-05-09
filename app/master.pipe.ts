@@ -9,19 +9,22 @@ import { Animal } from './animal.model';
 
 export class MasterPipe implements PipeTransform {
 
-  transform(input: Animal[], desiredMaster){
-    var output: Animal[] = [];
-    if (desiredMaster === "all") {
-      for (var i = 0; i < input.length; i++) {
-        output.push(input[i]);
-      }
-    } else if (desiredMaster === "lowAnimal") {
-      for (var i = 0; i < input.length; i++) {
-        if (input[i].age <= 5) {
-          output.push(input[i]);
+    transform(input: Animal[], desiredMaster) {
+      var output: Animal[] = [];
+      if(desiredMaster === "all") {
+        for (var i = 0; i < input.length; i++) {
+            output.push(input[i]);
         }
+        return output;
+      } else if (desiredMaster === "youngAnimal") {
+        for (var i = 0; i < input.length; i++) {
+          if (input[i].age < 7){
+            output.push(input[i]);
+          }
+        }
+        return output;
+      } else {
+        return input;
       }
     }
-    return output;
-  }
 }
