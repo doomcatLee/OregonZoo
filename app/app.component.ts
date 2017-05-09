@@ -10,7 +10,7 @@ import { Animal } from './animal.model';
 
 export class AppComponent {
   selectedAnimal = null;
-  lowAnimalClick = false;
+
 
 
   masterAnimalList: Animal[] = [

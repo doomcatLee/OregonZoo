@@ -14,7 +14,7 @@ import { NewAnimalComponent } from './new-animal.component';
 
 
   <div *ngIf="filterByMaster==='all'">
-  <div class="col-lg-4 col-sm-6 text-center" *ngFor="let currentAnimal of childAnimalList | masterPipe:filterByMaster">
+  <div class="col-lg-4 col-sm-6 text-center" *ngFor="let currentAnimal of childAnimalList | masterPipe:filterByMaster" style="margin-top: 100px;">
   <div class="well">
     <img class="img-circle img-responsive img-center" src= "{{currentAnimal.imgUrl}}" alt="">
     <div class="panel-heading">{{currentAnimal.name}}</div>
@@ -27,12 +27,11 @@ import { NewAnimalComponent } from './new-animal.component';
       <li>Number of caretakers: {{currentAnimal.caretakers}}</li>
       <li>Sex: {{currentAnimal.sex}}</li>
     </ul>
-      <button class="btn btn-default" (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button>
+    <button class="btn btn-default" data-toggle="modal" data-target="#editModal" (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button>
 
     </div>
   </div>
 
-  </div>
   <div *ngIf="filterByMaster==='lowAnimal'">
   <div class="col-lg-4 col-sm-6 text-center" *ngFor="let currentAnimal of childAnimalList | masterPipe:filterByMaster">
     <img class="img-circle img-responsive img-center" src=" {{currentAnimal.imgUrl}} " alt="">
@@ -47,11 +46,12 @@ import { NewAnimalComponent } from './new-animal.component';
       <li>Number of caretakers: {{currentAnimal.caretakers}}</li>
       <li>Sex: {{currentAnimal.sex}}</li>
     </ul>
-      <button class="btn btn-default" (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button>
+    <button class="btn btn-default" data-toggle="modal" data-target="#editModal" (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button>
 
     </div>
-
   </div>
+
+
 
   `
 })
