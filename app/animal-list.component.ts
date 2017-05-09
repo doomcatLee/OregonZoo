@@ -9,7 +9,7 @@ import { NewAnimalComponent } from './new-animal.component';
 
   <select (change)="onChange($event.target.value)">
     <option value="all">All Animals</option>
-    <option value="lowAnimal" (click)="showLowAnimal()">Low Animals</option>
+    <option value="lowAnimal" (click)="showLowAnimal()">Young Animals</option>
   </select>
 
 

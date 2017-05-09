@@ -17,7 +17,7 @@ export class MasterPipe implements PipeTransform {
       }
     } else if (desiredMaster === "lowAnimal") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].age < 10) {
+        if (input[i].age < 5) {
           output.push(input[i]);
         }
       }
