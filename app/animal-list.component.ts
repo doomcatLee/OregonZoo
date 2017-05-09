@@ -27,7 +27,7 @@ import { NewAnimalComponent } from './new-animal.component';
       <li>Number of caretakers: {{currentAnimal.caretakers}}</li>
       <li>Sex: {{currentAnimal.sex}}</li>
     </ul>
-      <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button>
+      <button class="btn btn-default" (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button>
 
     </div>
   </div>
@@ -47,7 +47,7 @@ import { NewAnimalComponent } from './new-animal.component';
       <li>Number of caretakers: {{currentAnimal.caretakers}}</li>
       <li>Sex: {{currentAnimal.sex}}</li>
     </ul>
-      <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button>
+      <button class="btn btn-default" (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button>
 
     </div>
 

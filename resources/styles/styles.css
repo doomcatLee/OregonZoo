@@ -116,7 +116,10 @@ button,label[for] {
 }
 
 img {
-    -ms-interpolation-mode: bicubic
+    -ms-interpolation-mode: bicubic;
+    width: 150px;
+    height: 150px;
+    margin-left: 27%;
 }
 
 html {
