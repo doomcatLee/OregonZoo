@@ -1,36 +1,32 @@
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse" role="navigation">
   <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-      <a class="navbar-brand" href="#">Oregon Zoo</a>
+      <a class="navbar-brand" style="font-family: coco;" href="#">Oregon Zoo</a>
     </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a class="btn btn-default" data-toggle="modal" data-target="#myModal">Add New Animal</a></li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
   </div>
-  <!-- /.container -->
 </nav>
 
+<div class="section-a">
+  <div class="container-a">
+    <h1>Welcome to the Oregon Zoo</h1>
+    <h3>The 64-acre Oregon Zoo is located in Portland, a city and surrounding metropolitan area of 2.26 million people. Attendance in 2011 exceeded 1.6 million.</h3>
+    <button type="button" style="font-family: coco; margin-top:17%;" class="btn btn-default"><a href="#animals">Learn more</a></button>
+  </div>
+</div>
 <!-- Page Content -->
-<div class="container">
+<div class="container" id="animals">
 
 
   <!-- Team Members Row -->
-  <div class="row" style="margin-top: 100px;">
+  <div class="row" style="margin-top: 50px;">
     <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
   </div>
 </div>
+
+
+
+<!-- MODALS -->
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">

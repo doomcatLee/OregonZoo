@@ -2,9 +2,45 @@
     box-sizing: border-box
 }
 
+@font-face {
+    font-family: roboto;
+    src: url("../../resources/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: coco;
+    src: url("../../resources/fonts/CocoGothic-Bold_trial.ttf");
+}
+
 *:after,*.before {
     box-sizing: border-box
 }
+
+.navbar{
+  margin-bottom: -2px;
+  border-radius: 0px;
+}
+
+.container-a{
+  text-align: center;
+  padding-top: 10%;
+}
+
+.container-a h1{
+  font-size: 70px;
+  font-family: "coco";
+  color: #ff4949;
+}
+
+.container-a h3{
+  margin-top: 4%;
+  font-size: 30px;
+  font-family: "roboto";
+  color: #06a4ad;
+
+}
+
+
 
 html,body,div,main,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
     box-sizing: border-box;
@@ -60,6 +96,11 @@ input,textarea {
 
 button,input[type="button"] {
     background: 0
+}
+
+.section-a{
+  height: 100vh;
+  background-image: url("../../resources/images/background.jpg");
 }
 
 :required {

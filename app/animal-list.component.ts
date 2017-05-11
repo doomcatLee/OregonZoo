@@ -6,8 +6,12 @@ import { NewAnimalComponent } from './new-animal.component';
   selector: 'animal-list',
   template: `
 
+  <div class="container">
+    <h1>List of current animals</h1>
+    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#myModal">Add Animal</button>
 
-  <select (change)="onChange($event.target.value)">
+
+  <select class="selectpicker" (change)="onChange($event.target.value)">
     <option value="all">All Animals</option>
     <option value="youngAnimal">Young Animals</option>
     <option value="lowCareTakers">Low Caretakers</option>
@@ -77,6 +81,8 @@ import { NewAnimalComponent } from './new-animal.component';
 </div>
 </div>
 </div>
+
+</div><!-- End of Container-->
 
   `
 })
